@@ -13,10 +13,11 @@ function App() {
         <Navbar />
 
         <Switch>
-          <Route path='/hello'>
+          <Route path="/hello">
             <Hello />
           </Route>
-          <Route path='/manajemen-buku'>
+          
+          <Route path="/manajemen-buku">
             <ManajemenBuku />
           </Route>
         </Switch>
