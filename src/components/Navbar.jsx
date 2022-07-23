@@ -5,7 +5,7 @@ function Navbar(){
     return (
         <div>
             <nav className="navbar navbar-expand bg-dark">
-                <div className="container">
+                <div className="container-fluid">
                     <ul className="nav">
                         <li>
                             <Link to="/hello" className="nav-link">

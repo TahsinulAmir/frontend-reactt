@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import ManajemenBuku from './components/ManajemenBuku';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Hello from './components/Hello';
 
 
@@ -12,15 +12,13 @@ function App() {
       <Router>
         <Navbar />
 
-        <Switch>
-          <Route path="/hello">
-            <Hello />
-          </Route>
+        <Routes>
+          <Route path="/hello" element={<Hello />} />            
+
+          <Route path="/manajemen-buku" element={<ManajemenBuku />}/>
+            
           
-          <Route path="/manajemen-buku">
-            <ManajemenBuku />
-          </Route>
-        </Switch>
+        </Routes>
       </Router>
     </div>
   );
