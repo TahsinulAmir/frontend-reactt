@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ManajemenBuku({ bookList }) {
     console.log(bookList);
+    const [form, setForm] = useState("");
     //data
 
     //eventhandling
+    function showCreate(){
+        setForm("create");
+    }
+
+    function showEdit(book) {
+        setForm("edit");
+    }
     return(
         <div className="container mt-3">
             <h1 className="text-center">Manajemen Buku</h1>
-
+            {form == "create" && (
             <div id="formTambah">
                 <h5>Tambah Buku</h5>
                 <hr />
@@ -22,8 +30,10 @@ function ManajemenBuku({ bookList }) {
                     <div className="col-2">
                         <input type="submit" className="btn btn-success ml-5" value="Simpan" />
                     </div>
-                </form>
+                </form>                
             </div>
+            )}
+
             <div id="formUbah">
                 <h5>Ubah Buku</h5>
                 <hr />
@@ -43,7 +53,7 @@ function ManajemenBuku({ bookList }) {
             <div id="daftarBuku">
                 <h2 className="mt-3">Daftar Buku</h2>
                 <hr />
-                <button className="btn btn-primary m-2">Tambah Buku</button>
+                <button className="btn btn-primary m-2" onClick={showCreate}>Tambah Buku</button>
                 <table className="table table-bordered">
                     <thead>
                         <tr>
