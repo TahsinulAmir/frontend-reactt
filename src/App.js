@@ -8,7 +8,7 @@ import { useState } from "react";
 
 
 function App() {
-  const [books, setBooks] = useState([{ _id: 1, judul: "Laskar Pelangi", stok: 7 }, { _id: 2, judul: "Bumi", stok: 11 }])
+  const [books, setBooks] = useState([{ _id: 1, judul: "Laskar Pelangi", stok: 7 }])
   return (
     <div>
       <Router>
